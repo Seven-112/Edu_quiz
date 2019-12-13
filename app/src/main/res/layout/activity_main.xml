@@ -1,0 +1,449 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:visibility="visible" />
+
+
+            <androidx.viewpager.widget.ViewPager
+
+                android:id="@+id/pager"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:padding="10dip"
+                app:centered="true"
+                app:fillColor="#df0623"
+                app:pageColor="#fff"
+                app:snap="false"
+                android:visibility="gone"/>
+
+
+        <RelativeLayout
+            android:id="@+id/mainLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pager"
+            android:visibility="visible"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rectangle_blue"
+                android:padding="2dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:weightSum="2">
+                    <RelativeLayout
+                        android:id="@+id/lytTestmcq1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="@dimen/margin_dp"
+                        android:onClick="testMCQ"
+
+                        android:layout_gravity="right"
+
+                        android:background="@drawable/leaderboard_bg">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/checklist"
+                            android:tint="@color/primary_darkgreen" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:text="Test your MCQ"
+
+                        android:gravity="left"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+
+
+                    android:paddingLeft="15dp"
+
+
+                    android:paddingRight="15dp"
+
+                    android:text="1. what is capital of India?"
+
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:textStyle="bold"
+                    />
+                <RadioGroup
+                    android:id="@+id/rg_options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:paddingStart="15dp">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvAns1"
+                        android:text="Delhi"
+                        android:textSize="12dp"
+                        style="@style/TextAppearance.AppCompat.Small"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvAns2"
+                        android:text="Mumbai"
+                        android:textSize="12dp"
+                        style="@style/TextAppearance.AppCompat.Small"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvAns3"
+                        android:textSize="12dp"
+                        android:text="Banglore"
+                        style="@style/TextAppearance.AppCompat.Small"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvAns4"
+                        android:text="Gujrat"
+                        android:textSize="12dp"
+                        style="@style/TextAppearance.AppCompat.Small"/>
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View More"
+                        android:layout_weight="1"
+                        android:onClick="viewMore"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:onClick="testShare"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainLogo"
+            android:layout_above="@id/bottomLayout"
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="2dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomLayout"
+           >
+
+            <TextView
+                android:id="@+id/tvAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/txt_color"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/midScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+android:visibility="gone"
+               >
+
+
+                <RelativeLayout
+                    android:id="@+id/lytPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginEnd="@dimen/circle_progress"
+                    android:background="@drawable/playquiz">
+
+                    <ImageView
+                        android:id="@+id/imgPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_dp"
+                        android:padding="@dimen/left_rigth_margin_score_button"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytBattle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                    android:layout_marginEnd="@dimen/circle_progress"
+
+                    android:background="@drawable/battlequiz">
+
+                    <ImageView
+                        android:id="@+id/imgBattle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_dp"
+                        android:padding="@dimen/left_rigth_margin_score_button"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginEnd="@dimen/circle_progress"
+                    android:layout_marginBottom="@dimen/margin_dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnInstruction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/instructions"
+                        android:padding="5dp"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnBookmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bookmark"
+                        android:padding="5dp"
+
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nevigation"
+            android:paddingBottom="3dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="7">
+
+                <RelativeLayout
+                    android:id="@+id/lytTestmcq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:onClick="testMCQ"
+                    android:background="@drawable/leaderboard_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/checklist"
+                        android:tint="@color/primary_darkgreen" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/lytLearnmcq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:onClick="learnMCQ"
+                    android:background="@drawable/leaderboard_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/study"
+                        android:tint="@color/primary_darkgreen" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytPlayquiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:background="@drawable/leaderboard_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/alarm"
+                        android:tint="@color/primary_darkgreen" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lytProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:background="@drawable/leaderboard_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/primary_darkgreen"
+                        app:srcCompat="@drawable/ic_profile" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lytSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:background="@drawable/leaderboard_bg"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/primary_darkgreen"
+                        app:srcCompat="@drawable/ic_settings" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lytSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/leaderboard_bg"
+                   >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/primary_darkgreen"
+                        app:srcCompat="@drawable/community" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+

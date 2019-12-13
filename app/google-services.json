@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "869074222500",
+    "firebase_url": "https://edu-quiz-4c60e.firebaseio.com",
+    "project_id": "edu-quiz-4c60e",
+    "storage_bucket": "edu-quiz-4c60e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869074222500:android:43564b989df661f3",
+        "android_client_info": {
+          "package_name": "com.brightfuture.eduquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869074222500-mvglahlgdeitorqi1c9naeohekvbbe7h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.brightfuture.eduquiz",
+            "certificate_hash": "490d28e169a3a42e2d02bfd4a30d2a8b79692c54"
+          }
+        },
+        {
+          "client_id": "869074222500-828fdl43rcagnd33bov7jv6tu8iu69bj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuP6jXfkj8tAfFqzo3WTksRzS6W_QC5uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869074222500-828fdl43rcagnd33bov7jv6tu8iu69bj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

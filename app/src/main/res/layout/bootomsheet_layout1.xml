@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+   >
+
+
+<ScrollView
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_dp"
+                android:text="Enter Mobile Number"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/edtMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dp"
+                android:layout_marginEnd="@dimen/margin_dp"
+                android:inputType="phone"
+                android:focusable="true" />
+
+
+        </LinearLayout>
+</ScrollView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+android:layout_below="@+id/layout"
+
+        android:orientation="horizontal"
+      >
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/cancel"
+            android:layout_marginBottom="@dimen/margin_dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/save"
+            android:layout_marginBottom="@dimen/margin_dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/mainLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/homelogo" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomLayout"
+           >
+
+            <TextView
+                android:id="@+id/tvAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/txt_color"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/midScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+
+               >
+
+
+                <RelativeLayout
+                    android:id="@+id/lytPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginEnd="@dimen/circle_progress"
+                    android:background="@drawable/playquiz">
+
+                    <ImageView
+                        android:id="@+id/imgPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_dp"
+                        android:padding="@dimen/left_rigth_margin_score_button"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytBattle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                    android:layout_marginEnd="@dimen/circle_progress"
+
+                    android:background="@drawable/battlequiz">
+
+                    <ImageView
+                        android:id="@+id/imgBattle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_dp"
+                        android:padding="@dimen/left_rigth_margin_score_button"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginEnd="@dimen/circle_progress"
+                    android:layout_marginBottom="@dimen/margin_dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnInstruction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/instructions"
+                        android:padding="5dp"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnBookmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bookmark"
+                        android:padding="5dp"
+
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nevigation"
+            android:paddingBottom="3dp"
+            >
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="7">
+                <RelativeLayout
+                    android:id="@+id/lytHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:onClick="Home"
+                    android:background="@drawable/leaderboard_bg">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/home"
+                        android:tint="@color/primary_darkgreen" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytLeaderBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:background="@drawable/leaderboard_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/rank"
+                        android:tint="@color/primary_darkgreen" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:background="@drawable/leaderboard_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/primary_darkgreen"
+                        app:srcCompat="@drawable/ic_profile" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lytSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:background="@drawable/leaderboard_bg"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/primary_darkgreen"
+                        app:srcCompat="@drawable/ic_settings" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lytSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/leaderboard_bg"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:tint="@color/primary_darkgreen"
+                        app:srcCompat="@drawable/ic_sign_out" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+

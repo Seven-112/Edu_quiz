@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="progress_h_w">42dp</dimen>
+    <dimen name="circle_progress">33dp</dimen>
+    <dimen name="result_circle">90dp</dimen>
+    <dimen name="img_que_height">150dp</dimen>
+    <dimen name="img_height">140dp</dimen>
+    <dimen name="img_width">250dp</dimen>
+    <dimen name="view_corner">25dp</dimen>
+    <dimen name="view_corner_inner">22dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="circle_height">45dp</dimen>
+    <dimen name="que_img_height">110dp</dimen>
+    <dimen name="option_btn_height">28dp</dimen>
+    <dimen name="dialog_img_height">180dp</dimen>
+    <dimen name="profile_size">100dp</dimen>
+    <dimen name="left_rigth_margin_score_button">10dp</dimen>
+    <dimen name="margin_dp">10dp</dimen>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_marginEnd="@dimen/left_rigth_margin_score_button"
+    android:layout_marginStart="@dimen/left_rigth_margin_score_button"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        android:padding="5dp">
+
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgQuestion">
+
+            <TextView
+                android:id="@+id/tvNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1."
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvQue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/tvNo"
+                android:text="@string/title"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvQue"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/tvNo"
+                android:text="@string/answer"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/wrong_dark"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tvQue"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

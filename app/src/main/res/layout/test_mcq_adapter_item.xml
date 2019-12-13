@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/llyt1"
+    android:background="@drawable/rectangle"
+    android:padding="2dp">
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="1. what is capital of India?"
+
+       style="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/tvQuestion"
+        android:weightSum="2"
+        android:id="@+id/ll_ans1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="1. "
+          style="@style/TextAppearance.AppCompat.Small"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+
+            />
+        >
+
+        <TextView
+            android:id="@+id/tvAns1"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:text="Delhi"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/ll_ans1"
+        android:weightSum="2"
+        android:id="@+id/ll_ans2"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="2. "
+            style="@style/TextAppearance.AppCompat.Small"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+
+            />
+        >
+
+        <TextView
+            android:id="@+id/tvAns2"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:text="Mumbai"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/ll_ans2"
+        android:weightSum="2"
+        android:id="@+id/ll_ans3"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="3. "
+            style="@style/TextAppearance.AppCompat.Small"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+
+            />
+        >
+
+        <TextView
+            android:id="@+id/tvAns3"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:text="Banglore"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/ll_ans3"
+        android:weightSum="2"
+        android:id="@+id/ll_ans4"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="4. "
+            style="@style/TextAppearance.AppCompat.Small"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+
+            />
+        >
+
+        <TextView
+            android:id="@+id/tvAns4"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:text="Chennai"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_trueAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="Right Answer : 2"
+
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner_AdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyt1"
+        android:layout_centerHorizontal="true"
+        app:adSize="MEDIUM_RECTANGLE"
+        android:visibility="gone"
+        app:adUnitId="@string/admob_banner_id" />
+</RelativeLayout>
+

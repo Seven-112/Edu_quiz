@@ -1,0 +1,13 @@
+<resources>
+
+    <dimen name="view_left_right_margin">10dip</dimen>
+    <dimen name="left_rigth_margin_score_button">10dp</dimen>
+    <dimen name="margin_dp">15dp</dimen>
+    <dimen name="progress_h_w">50dp</dimen>
+    <dimen name="circle_progress">35dp</dimen>
+    <dimen name="que_img_height">120dp</dimen>
+    <dimen name="default_text_size">16sp</dimen>
+
+    <dimen name="img_height">155dp</dimen>
+    <dimen name="img_width">270dp</dimen>
+</resources>

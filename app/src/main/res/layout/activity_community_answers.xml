@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/new_bg">
+
+
+        <include layout="@layout/toolbar_layout" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolBar">
+
+            <RelativeLayout
+                android:id="@+id/checkLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvNoConnection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/msg_no_internet"
+                    android:textSize="@dimen/default_text_size" />
+
+                <Button
+                    android:id="@+id/btnTry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNoConnection"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:background="@drawable/new_btn_bg"
+                    android:paddingStart="@dimen/circle_progress"
+                    android:paddingEnd="@dimen/circle_progress"
+                    android:text="@string/try_again"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/drop_shadow" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rectangle_blue"
+                android:id="@+id/llquestion"
+                android:layout_below="@id/divider"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:id="@+id/tvQuestion"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Learn MCQ from Category and Subcategory"
+                        android:layout_weight="1"
+                        android:paddingEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:gravity="left"/>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_above="@id/bottomLayout"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Posted By:"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:id="@+id/tvName"
+
+
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date:"
+                        android:id="@+id/tvdate"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+
+                        />
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/tvlocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+
+
+                    android:paddingLeft="15dp"
+
+
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="Location:"
+
+
+                    style="@style/TextAppearance.AppCompat.Small"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/llquestion"
+                android:id="@+id/llanswer"
+
+                >
+                <EditText
+                    android:id="@+id/etAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="What is answer?"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:id="@+id/btnPost"
+                    android:onClick="onPost"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txtblanklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/no_category"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclyt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/llanswer"
+                android:layout_margin="3dp"
+              >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="colorPrimary">#6c9eff</color>
+    <color name="colorPrimaryDark">#393D5A</color>
+    <color name="colorAccent">#6c9eff</color>
+    <color name="txt_color">#393d5a</color>
+    <color name="right_dark">#ed2a2a</color>
+    <color name="right_light">#e9605f</color>
+    <color name="wrong_dark">#22af4a</color>
+    <color name="wrong_light">#22e357</color>
+    <color name="bottom_bg_color">#535a84</color>
+    <color name="light_black">#191919</color>
+    <color name="gray1">#f1f1f1</color>
+    <color name="color_yellow">#ff9646</color>
+    <color name="color_orange">#ff725f</color>
+<color name="toolbar_color">#80ffffff</color>
+    <!--background color of lifeline bg nd main page bottom bg colors-->
+    <color name="transparent">#00000000</color>
+    <color name="dark_red">#ff634e</color>
+    <color name="light_red">#ff9081</color>
+    <color name="dark_orange">#ff9646</color>
+    <color name="light_orange">#ffc69b</color>
+    <color name="dark_sky">#4a88ff</color>
+    <color name="light_sky">#8eb5ff</color>
+    <color name="dark_blue">#3f4565</color>
+    <color name="light_blue">#606899</color>
+    <color name="dark">#4350B0</color>
+    <color name="one">#f1456f</color>
+    <color name="two">#1cbcb4</color>
+    <color name="three">#ffc276</color>
+    <color name="off_white">#f4f4f4</color>
+    <color name="gray">#808080</color>
+    <color name="light_gray">#d4d4d4</color>
+
+    <color name="primary_light_green">#9cdd6b</color>
+    <color name="primary_mid_green">#06876a</color>
+    <color name="primary_dark_green">#330a0a</color>
+
+    <color name="primary_darkgreen">#6fc26a</color>
+</resources>

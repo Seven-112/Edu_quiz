@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/answer_bg"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@color/light_black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dp"
+                android:layout_marginEnd="@dimen/margin_dp"
+                android:layout_marginBottom="@dimen/margin_dp"
+                android:gravity="center"
+                android:text="@string/msg_alert_leave"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/left_rigth_margin_score_button"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnNo"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dp"
+                android:layout_marginEnd="@dimen/left_rigth_margin_score_button"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/no"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/light_black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/left_rigth_margin_score_button"
+                android:layout_marginEnd="@dimen/margin_dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/yes"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                android:textColor="@color/light_black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

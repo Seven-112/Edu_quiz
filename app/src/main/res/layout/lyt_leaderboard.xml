@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="@dimen/left_rigth_margin_score_button"
+    android:layout_marginEnd="@dimen/left_rigth_margin_score_button"
+    android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:background="@drawable/answer_bg">
+
+        <TextView
+            android:id="@+id/txtno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/left_rigth_margin_score_button"
+            android:gravity="center"
+
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/lytimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtno"
+            android:background="@drawable/button_bg"
+            android:layoutDirection="ltr"
+            android:padding="0.5dp">
+
+
+            <com.brightfuture.eduquiz.helper.CircleImageView
+                android:id="@+id/imgprofile"
+                android:layout_width="@dimen/option_btn_height"
+                android:layout_height="@dimen/option_btn_height"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+               />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="@dimen/left_rigth_margin_score_button"
+            android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+            android:layout_toEndOf="@+id/lytimg"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtname"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_dp"
+            android:layout_marginStart="@dimen/left_rigth_margin_score_button"
+            android:layout_toEndOf="@+id/lytimg"
+            android:gravity="center"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

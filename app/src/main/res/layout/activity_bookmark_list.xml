@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    tools:context="com.brightfuture.eduquiz.activity.BookmarkList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_bg">
+
+        <include layout="@layout/toolbar_layout" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/toolBar"
+            android:background="@drawable/drop_shadow" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/divider"
+            android:layout_above="@+id/btnPlay" />
+
+        <TextView
+            android:id="@+id/emptyMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/bm_empty_msg"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="@color/white"
+            android:background="@drawable/new_btn_bg"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_margin="@dimen/left_rigth_margin_score_button"
+            android:text="@string/bookmark_play" />
+
+    </RelativeLayout>
+</RelativeLayout>

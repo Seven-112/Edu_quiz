@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#00000000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_corner_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/msg_enough_coin"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+
+            android:background="@drawable/drop_shadow" />
+
+        <TextView
+            android:id="@+id/title_coin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/coin_message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/title_coin_subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/coin_message_sub"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/skip_btn_message"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/primary_mid_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/watch_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/setting_bottom_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/msg_watch_video"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</LinearLayout>
+

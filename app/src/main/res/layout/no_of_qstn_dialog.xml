@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nevigation"
+            android:gravity="center"
+            android:padding="@dimen/left_rigth_margin_score_button"
+            android:text="@string/no_of_qstn"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/left_rigth_margin_score_button">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/drop_shadow" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/enter_no_of_qstn"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/qstn_cnt_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:gravity="center"
+                android:padding="5dp"
+                android:paddingLeft="20dp"
+                android:inputType="number"
+                android:hint="10"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nevigation"
+            android:gravity="center"
+            android:padding="@dimen/left_rigth_margin_score_button"
+            android:text="@string/ok"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright 2012 Google Inc. All rights reserved.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/new_bg">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/topLayout"
+        android:background="@drawable/drop_shadow" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subscriptions"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:id="@+id/tvsubscription"/>
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/tvsubscription"
+        android:background="@drawable/drop_shadow" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currently You are not a Premium Member"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_below="@+id/divider1"
+        android:id="@+id/tvsubscriptiondesc"/>
+
+
+    <ImageView
+        android:id="@+id/infinite_gas_button1"
+        android:layout_margin="20dp"
+        android:onClick="onInfiniteGasButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/premiumbig"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvsubscriptiondesc"/>
+
+
+
+    <Button
+        android:id="@+id/infinite_gas_button"
+        android:layout_margin="20dp"
+        android:onClick="onInfiniteGasButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscribe Now"
+        android:padding="15dp"
+        android:background="@drawable/rectangle_blue"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/infinite_gas_button1"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/screen_wait"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:contentDescription="loading"
+        android:src="@drawable/wait"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/screen_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="title"
+            android:src="@drawable/title"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/free_or_premium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="free v premium"
+            android:src="@drawable/free"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/gas_gauge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="indicator"
+            android:src="@drawable/gas4"
+
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:onClick="onDriveButtonClicked"
+                android:src="@drawable/drive" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:onClick="onBuyGasButtonClicked"
+                android:src="@drawable/buy_gas" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/upgrade_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:onClick="onUpgradeAppButtonClicked"
+                android:src="@drawable/upgrade_app" />
+
+            <ImageView
+                android:id="@+id/infinite_gas_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onInfiniteGasButtonClicked" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

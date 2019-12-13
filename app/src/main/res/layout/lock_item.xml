@@ -1,0 +1,58 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="@dimen/view_corner"
+    android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="5dp"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/answer_bg"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/lock"
+            android:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/level_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/question_no"
+            android:layout_toEndOf="@+id/lock"
+            android:layout_margin="5dp"
+            android:text="@string/title"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/question_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:text="@string/zero"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+
+

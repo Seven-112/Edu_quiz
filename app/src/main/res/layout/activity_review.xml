@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    tools:context="com.brightfuture.eduquiz.activity.ReviewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_bg">
+
+        <include layout="@layout/toolbar_layout"></include>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/toolBar"
+            android:background="@drawable/drop_shadow" />
+
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/divider"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/mainScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/img_que_height"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/question_bg">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp">
+
+                            <com.android.volley.toolbox.NetworkImageView
+                                android:id="@+id/imgQuestion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY" />
+                        </androidx.cardview.widget.CardView>
+
+                        <ScrollView
+                            android:id="@+id/queScroll"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/img_que_height">
+
+                                <TextView
+                                    android:id="@+id/question1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="@dimen/left_rigth_margin_score_button"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/default_text_size"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </ScrollView>
+
+
+                        <ProgressBar
+                            android:id="@+id/imgProgress"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/default_text_size"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                            android:layout_marginEnd="16dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/view_corner_inner"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/a_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:background="@drawable/answer_bg"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/option_a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/option_bg"
+                                    android:gravity="center"
+                                    android:padding="3dp"
+                                    android:text="@string/a"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/btnOpt1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toEndOf="@+id/option_a"
+                                    android:clickable="false"
+                                    android:gravity="left"
+                                    android:layout_centerInParent="true"
+                                    android:padding="3dp"
+                                    android:text="@string/answer"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/default_text_size" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                            android:layout_marginEnd="16dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/view_corner_inner"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/b_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/answer_bg"
+
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/option_b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/option_bg"
+                                    android:gravity="center"
+                                    android:padding="3dp"
+                                    android:text="@string/b"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/btnOpt2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toEndOf="@+id/option_b"
+                                    android:clickable="false"
+                                    android:gravity="left"
+                                    android:layout_centerInParent="true"
+                                    android:padding="3dp"
+                                    android:text="@string/answer"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/default_text_size" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                            android:layout_marginEnd="16dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/view_corner_inner"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/c_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/answer_bg"
+
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/option_c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/option_bg"
+                                    android:gravity="center"
+                                    android:padding="3dp"
+                                    android:text="@string/c"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/btnOpt3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toEndOf="@+id/option_c"
+                                    android:gravity="left"
+                                    android:layout_centerInParent="true"
+                                    android:padding="3dp"
+                                    android:text="@string/answer"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/default_text_size" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="@dimen/margin_dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/view_corner_inner"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:id="@+id/d_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/answer_bg"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/option_d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/option_bg"
+                                    android:gravity="center"
+                                    android:padding="3dp"
+                                    android:text="@string/d"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/btnOpt4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toEndOf="@+id/option_d"
+                                    android:gravity="left"
+                                    android:layout_centerInParent="true"
+                                    android:padding="3dp"
+                                    android:text="@string/answer"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/default_text_size" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/main_layout"
+                        android:layoutDirection="ltr">
+
+                        <ImageView
+                            android:id="@+id/prev"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_preview" />
+
+                        <TextView
+                            android:id="@+id/questionNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_next" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btnSolution"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/new_btn_bg"
+                        android:paddingStart="@dimen/circle_progress"
+                        android:paddingEnd="@dimen/circle_progress"
+                        android:text="@string/extra_note"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/answer_bg"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/tvSolution"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="serif"
+                            android:padding="10dp"
+                            android:text="@string/note"
+                            android:textColor="@color/black"
+                            android:textSize="17dp" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/left_rigth_margin_score_button"
+            android:background="@drawable/fab_bg"
+            android:layoutDirection="ltr">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/ic_bookmark1" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

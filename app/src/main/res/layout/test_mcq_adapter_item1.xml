@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle"
+    android:id="@+id/llyt1"
+    android:padding="2dp"
+    android:paddingBottom="2dp">
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="1. what is capital of India?"
+
+       style="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+         />
+    <RadioGroup
+        android:id="@+id/rg_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingStart="15dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAns1"
+            android:text="Delhi"
+            style="@style/TextAppearance.AppCompat.Small"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAns2"
+            android:text="Delhi"
+            style="@style/TextAppearance.AppCompat.Small"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAns3"
+            android:text="Delhi"
+            style="@style/TextAppearance.AppCompat.Small"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAns4"
+            android:text="Delhi"
+            style="@style/TextAppearance.AppCompat.Small"/>
+    </RadioGroup>
+</LinearLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner_AdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyt1"
+        android:layout_centerHorizontal="true"
+        app:adSize="MEDIUM_RECTANGLE"
+        android:visibility="gone"
+        app:adUnitId="@string/admob_banner_id" />
+</RelativeLayout>
+

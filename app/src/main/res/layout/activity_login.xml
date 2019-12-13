@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    tools:context="com.brightfuture.eduquiz.activity.LoginActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imgTop"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homelogo" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvPrivacy">
+
+            <RelativeLayout
+                android:id="@+id/middleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/loginGoogle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_marginTop="@dimen/circle_progress"
+                    android:layout_marginEnd="@dimen/circle_progress"
+                    app:buttonSize="wide"
+                    app:colorScheme="dark" />
+
+                <ImageView
+                    android:id="@+id/imgGmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                    android:background="@drawable/btn_google" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/loginFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/loginGoogle"
+                    android:layout_marginStart="@dimen/circle_progress"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginEnd="@dimen/circle_progress"
+                    android:paddingTop="@dimen/left_rigth_margin_score_button"
+                    android:paddingBottom="@dimen/margin_dp"
+                    app:buttonSize="wide" />
+
+                <ImageView
+                    android:id="@+id/imgFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgGmail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:background="@drawable/btn_fb" />
+
+                <LinearLayout
+                    android:id="@+id/viewLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgFacebook"
+                    android:layout_marginStart="@dimen/margin_dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/margin_dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/dark_blue" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/msg_play_guest"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/dark_blue" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnPlayGuest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:src="@drawable/btn_guest"
+                    android:textColor="@color/white" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="@dimen/left_rigth_margin_score_button"
+            android:text="@string/term_privacy"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources>
+
+    <!--
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    -->
+    <dimen name="progress_h_w">70dp</dimen>
+    <dimen name="circle_progress">45dp</dimen>
+    <dimen name="result_circle">120dp</dimen>
+    <dimen name="img_que_height">300dp</dimen>
+    <dimen name="img_height">200dp</dimen>
+    <dimen name="img_width">270dp</dimen>
+    <dimen name="view_corner">35dp</dimen>
+    <dimen name="view_corner_inner">32dp</dimen>
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="que_img_height">200dp</dimen>
+    <dimen name="circle_height">70dp</dimen>
+    <dimen name="option_btn_height">40dp</dimen>
+    <dimen name="dialog_img_height">250dp</dimen>
+    <dimen name="profile_size">200dp</dimen>
+    <dimen name="left_rigth_margin_score_button">10dp</dimen>
+    <dimen name="margin_dp">15dp</dimen>
+</resources>

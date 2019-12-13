@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <corners android:radius="5dp" />
+    <stroke
+        android:width="2.5px"
+        android:color="@color/colorPrimaryDark" />
+    <size
+        android:width="@dimen/option_btn_height"
+        android:height="@dimen/option_btn_height" />
+</shape><!--<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="150dp"
+    android:viewportHeight="50"
+    android:viewportWidth="200"
+    >
+
+    <path
+        android:fillColor="#6653cfa5"
+
+        android:pathData="M 200 0 L 20 0 L 0 50 L 180 50 L 200 0" />
+
+</vector>-->

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/new_bg">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/toolBar"
+            android:background="@drawable/drop_shadow" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/divider"
+            android:layout_marginTop="@dimen/left_rigth_margin_score_button">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/left_rigth_margin_score_button"
+                    android:layout_marginTop="@dimen/circle_progress"
+                    android:layout_marginEnd="@dimen/left_rigth_margin_score_button"
+                    android:layout_marginBottom="@dimen/left_rigth_margin_score_button"
+                    android:background="@drawable/leaderboard_background">
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytrank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:orientation="horizontal"
+
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:tint="@color/two"
+                                app:srcCompat="@drawable/ic_rankno" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:elevation="16dp"
+                                android:text="@string/rank_2"
+
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <RelativeLayout
+                                    android:id="@+id/imgLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp">
+
+
+                                        <com.brightfuture.eduquiz.helper.CircleImageView
+                                            android:id="@+id/img2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="60dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:contentDescription="@string/app_name" />
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+
+                                <TextView
+                                    android:id="@+id/txt2name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgLayout"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="2dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt2score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt2name"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/two"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:tint="@color/three"
+                                app:srcCompat="@drawable/ic_rankno" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:elevation="16dp"
+                                android:text="@string/rank_3"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/imgLayout1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp">
+
+
+                                        <com.brightfuture.eduquiz.helper.CircleImageView
+                                            android:id="@+id/img3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:contentDescription="@string/app_name" />
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/txt3name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgLayout1"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="2dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt3score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txt3name"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/three"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rank_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <com.brightfuture.eduquiz.helper.CircleImageView
+                            android:id="@+id/img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/left_rigth_margin_score_button"
+                            android:contentDescription="@string/app_name" />
+                    </RelativeLayout>
+
+                    <!-- <FrameLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true">
+
+                         &lt;!&ndash;<android.support.design.widget.FloatingActionButton
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             app:backgroundTint="@color/homebg"
+                             app:fabSize="mini" />&ndash;&gt;
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             app:srcCompat="@drawable/ic_rankno" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:elevation="16dp"
+                             android:text="1"
+                             android:textColor="@android:color/white"
+                             android:textStyle="bold" />
+                     </FrameLayout>-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt1name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt1score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/one"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lyt1"
+                android:layout_marginStart="@dimen/margin_dp"
+                android:layout_marginTop="@dimen/circle_progress"
+                android:layout_marginEnd="@dimen/margin_dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/lytownscore"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:overScrollMode="never" />
+
+                <RelativeLayout
+                    android:id="@+id/lytownscore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:text="-"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/lytimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/txtno"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_account" />
+
+                        <com.brightfuture.eduquiz.helper.CircleImageView
+                            android:id="@+id/imgprofile"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/app_name" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@+id/txtscore"
+                        android:layout_toEndOf="@+id/lytimg"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txtscore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/lyt_switch"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/color_yellow"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <!--<android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/homebg"
+                    app:fabSize="mini" />-->
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:tint="@color/one"
+                    app:srcCompat="@drawable/ic_rankno" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="16dp"
+                    android:text="@string/rank_1"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

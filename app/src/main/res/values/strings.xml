@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Edu-quiz</string>
+    <string name="completed">Congratulations!! \n You have completed the level.</string>
+    <string name="completed_test">Congratulations!! \n You have passed the test.</string>
+    <string name="not_completed">Oops!! \n Level not completed.Play again!</string>
+    <string name="not_completed_test">Oops!! \n You have not passed the test.Play again!</string>
+    <string name="select_level">Select Level</string>
+    <string name="select_category">Select Category</string>
+    <string name="select_subcategory">Select Sub Category</string>
+    <string name="more_app">More Apps</string>
+    <string name="sound">Sound</string>
+    <string name="share_app">Share App</string>
+    <string name="vibration">Vibration</string>
+    <string name="rateapp">Rate Us</string>
+    <string name="bg_music">Background Music</string>
+    <string name="share_via">Share via</string>
+    <string name="share_subject">I like Edu-quiz Game</string>
+    <string name="next_play">Play Next Level</string>
+    <string name="play_again">Play Again</string>
+    <string name="quite">Home</string>
+    <string name="review_answer">Review Answers</string>
+    <string name="share_score">Share Your Score</string>
+    <string name="action_settings">Settings</string>
+    <string name="play_next">Play Again</string>
+    <string name="lets_play">Let\'s Play</string>
+    <string name="instruction">Instruction</string>
+    <string name="rank_1">1</string>
+    <string name="rank_2">2</string>
+    <string name="rank_3">3</string>
+    <string name="msg_no_internet">No internet connection!!</string>
+    <string name="no_category">sub category not available!!</string>
+    <string name="no_sub_category">sub category not available!!</string>
+    <string name="no_enough_question">Not enough questions, to play level.</string>
+    <string name="retry">RETRY</string>
+    <string name="title">Title</string>
+    <string name="bm_empty_msg">bookmark not available</string>
+
+    <string name="o1">1. </string>
+    <string name="o2">2. </string>
+    <string name="o3">3. </string>
+    <string name="o4">4. </string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="answer">answer</string>
+    <string name="extra_note">Extra Note</string>
+    <string name="note">Note</string>
+    <string name="ok">OK</string>
+    <string name="report">Report Question</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="generate_pdf">Generate PDF</string>
+    <string name="share">Share</string>
+    <string name="view">View</string>
+    <string name="title_already_used">Life Line Already Used !!</string>
+    <string name="msg_lifeline_used">You can use only once per level</string>
+    <string name="true_ans">True Ans: </string>
+    <string name="bookmark_play1">Bookmark Play</string>
+    <string name="zero">0</string>
+    <string name="loading">Loading…</string>
+    <string name="bookmark_list">Bookmark List</string>
+    <string name="level_not_available">level not available</string>
+    <string name="go_back">Go Back</string>
+    <string name="account_deactivate">Your Account is deactivate by admin</string>
+
+    <string name="msg_enough_coin">Not Enough Coins !!</string>
+    <string name="coin_message">You don\'t have enough coins. You need at least 4 coins to use this lifeline.</string>
+    <string name="coin_message_sub">Watch a short video &amp; get free coins</string>
+    <string name="skip_btn_message">SKIP. I DON\'T NEED COINS</string>
+    <string name="msg_watch_video">WATCH NOW</string>
+    <string name="total_score">Total Score</string>
+    <string name="total_coins">Total Coins</string>
+    <string name="right">Right</string>
+    <string name="wrong">Wrong</string>
+    <string name="report_hint">Type a message</string>
+    <string name="pg_dialog_title">\u25CF Please wait&#8230;your pdf report is generating&#8230;</string>
+    <string name="privacy_terms1">Privacy Policy and Terms of Service </string>
+    <string name="term">Terms of Service</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="exit_msg">Do you want to exit the level?</string>
+    <string name="end_msg">Do you want to submit the test</string>
+    <string name="end_test_view_more">Do you want to leave this test and view more tests?</string>
+    <string name="end_learn_view_more">Do you want learn from more categories? </string>
+    <string name="bookmark_play">Play Bookmark</string>
+    <string name="all_complete_msg">You have Completed All Questions !!</string>
+
+
+    <!--instruction  messages-->
+    <string name="has_option">Quiz game has 4 options</string>
+    <string name="msg_right">For each right answer 5 points will be given.</string>
+    <string name="msg_wrong">minus 2 points for each question</string>
+    <string name="msg_lifeline">Use of Lifeline  : You can use only once per level</string>
+    <string name="msg_fifty_fifty">50 – 50 : for remove two option out of Four(deduct 4 coins ).</string>
+    <string name="msg_skip">Skip question: you can pass question without minus points(deduct 2 coins).</string>
+    <string name="msg_opinion">Audience poll: use audience paul for check other users choose option(deduct 4 coins).</string>
+    <string name="msg_reset">Reset timer: Reset timer again if you needed more time score (deduct 2 coins).</string>
+    <string name="msg_leaderboard">You can compare your score with other users of apps</string>
+    <string name="leaderboard">LeaderBoard</string>
+
+
+    <string name="textsize_dialog_lbl_fontsize">Font Size</string>
+    <string name="font_size">Font Size</string>
+    <string name="level_locked">Level is Locked</string>
+
+    <string name="msg_play_guest">OR You Can</string>
+    <string name="logout_warning">Do you really want to log out?</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile Number</string>
+    <string name="back">BACK</string>
+    <string name="play_quiz">PLAY QUIZ</string>
+    <string name="battle_quiz">BATTLE QUIZ</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="show_answer">Show Answer</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="from_library">Choose from Library</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="save">SAVE</string>
+    <string name="email">Email</string>
+    <string name="logout">Logout</string>
+    <string name="term_privacy">By Logging in, you agree to our Terms of Service and Privacy Policy</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms">Terms Of Service</string>
+
+    <!--instruction battle String-->
+    <string name="battle_msg1">\u25CF This will allow player vs player battle</string>
+    <string name="battle_msg2">\u25CF If not found any player to a battle, you can battle with the robot</string>
+    <string name="battle_msg3">\u25CF For battle, same questions will be served for both the player &amp; the winner will be declared base on no of right answers</string>
+
+
+    <!--Strings for battle-->
+    <string name="matching_opponent">Matching Opponent</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="exit">EXIT</string>
+    <string name="play_with_computer">PLAY WITH ROBOT </string>
+    <string name="play_with_computer1">PLAY WITH \n ROBOT </string>
+    <string name="congrats">Congratulation</string>
+    <string name="next_time">Batter Luck Next Time!!</string>
+    <string name="robot">Robot</string>
+    <string name="msg_player_not_available"><h3><b>Oops!</b></h3>\n Player Not Available For Battle!!</string>
+    <string name="alert_msg">Oops!! \n Something went wrong. please try again in sometime </string>
+    <string name="question_not_available">Question Not Available</string>
+    <string name="leave_battle_txt"> &#160;has leave the game.</string>
+    <string name="msg_win_battle">, you win the Battle</string>
+    <string name="msg_opponent_win_battle">&#160;win the Battle</string>
+    <string name="msg_alert_leave">"Are you sure,\n you want to leave battle ?"</string>
+    <string name="msg_draw_game">"Draw..!!\n The Game Is Over play again"</string>
+    <string name="find_player">FIND NEW PLAYER</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="try_again1">TRY \n AGAIN</string>
+    <string name="or">Or</string>
+    <string name="something_wrong">Something went wrong. please try again in sometime.</string>
+    <string name="oops">Oops!!</string>
+    <string name="search_for">Searching for an Opponent&#8230;</string>
+    <string name="battle">BATTLE</string>
+    <string name="leave_battle">Leave Battle</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="battle_start_message">Your battle quiz start within some Seconds&#8230;</string>
+    <string name="back_message">Are you sure , you  want to leave ?</string>
+    <!--facebook appId for login-->
+    <string name="facebook_app_id">519095508861913</string>
+    <string name="fb_login_protocol_scheme">fb519095508861913</string>
+    <string name="level_txt">Level : </string>
+    <string name="que">Que : </string>
+
+    <!--Ad Mob Id-->
+    <string name="adAppId">ca-app-pub-8954844284019417~4714645250</string>
+    <string name="admob_Rewarded_Video_Ads">ca-app-pub-8954844284019417/1485846687</string>
+    <string name="admob_interstitial_id">ca-app-pub-8954844284019417/8915590621</string>
+    <string name="admob_banner_id">ca-app-pub-8954844284019417/5441828597</string>
+    <string name="admob_card_id">ca-app-pub-8954844284019417/2465770645</string>
+    <string name="select_test_to_play">Select test to play</string>
+    <string name="enter_no_of_qstn">Enter no of questions you want to play</string>
+    <string name="no_of_qstn">No of Questions</string>
+    <string name="select_cat_to_learn">Select category</string>
+    <string name="end_learn_msg">Do you want to end learning?</string>
+    <string name="well_done">Well Done!\nKeep Learning....</string>
+    <string name="learn_more">Learn More</string>
+    <string name="result">Result</string>
+    <string name="be_premium">Premium Member</string>
+    <string name="this_is_required">This field is required</string>
+    <string name="post_question">Post Question</string>
+    <string name="ask_a_question">Ask Question</string>
+
+    <string-array name="category">
+        <item>Cat 1</item>
+        <item>Cat 2</item>
+        <item>Cat 3</item>
+    </string-array>
+    <string-array name="subcategory">
+        <item>Subcat 1</item>
+        <item>Subcat 2</item>
+        <item>Subcat 3</item>
+    </string-array>
+
+    <string-array name="options">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="subscription_period_prompt">Select your subscription period</string>
+    <string name="subscription_resignup_prompt">To reactivate your subscription, select your subscription period</string>
+    <string name="subscription_update_prompt">To change your subscription, select your new subscription period</string>
+    <string name="subscription_period_monthly">Half Yearly (SGD 1.50)</string>
+    <string name="subscription_period_yearly">Yearly (SGD 2.00)</string>
+    <string name="subscription_period_quaterly">Quaterly (SGD 0.99)</string>
+    <string name="subscription_prompt_continue">Continue</string>
+    <string name="subscription_prompt_cancel">Cancel</string>
+    <string name="content_description_app_loading_image">App loading image</string>
+    <string name="content_description_title_image">80\'s Video Game Style Car Logo</string>
+    <string name="content_desc_gas_gauge_indicator">Gas gauge indicator</string>
+    <string name="content_desc_free_vs_premium_indicator">Free or Premium Image Indicator</string>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/view_corner">
+
+    <RelativeLayout
+        android:id="@+id/rootview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/nevigation_red">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/view_left_right_margin"
+                android:gravity="center_horizontal"
+                android:text="@string/ask_a_question"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+
+            android:layout_below="@id/titlebar_layout"
+            android:background="@drawable/drop_shadow" />
+
+        <RelativeLayout
+            android:id="@+id/contents_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titlebar_layout">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/drop_shadow" />
+
+                    <RelativeLayout
+                        android:id="@+id/sound_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider2"
+                        android:onClick="viewClickHandler"
+                        android:padding="5dp">
+
+                        <EditText
+                            android:id="@+id/etQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:lines="3"
+                            android:hint="Write your question here"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/sound_layout"
+                        android:background="@drawable/drop_shadow" />
+
+                    <RelativeLayout
+                        android:id="@+id/vibration_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider3"
+                        android:onClick="viewClickHandler"
+                        android:padding="5dp">
+
+                        <EditText
+                            android:id="@+id/etLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:hint="What is your location?"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/vibration_layout"
+                        android:background="@drawable/drop_shadow" />
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/Ok_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider4"
+                        android:background="@color/bottom_bg_color"
+                        android:onClick="viewClickHandler">
+
+
+                        <TextView
+                            android:id="@+id/ok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/nevigation_red"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/ok"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

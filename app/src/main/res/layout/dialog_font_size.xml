@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginStart="5dp"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:text="@string/textsize_dialog_lbl_fontsize"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_font_size_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_weight="50"
+                android:enabled="false"
+                android:textSize="25dp"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/skBar_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/gray1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="35.0dip"
+                android:text="@string/ok"
+                android:gravity="center"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

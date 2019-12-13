@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/winner_top_corner_bg"
+        android:gravity="center|top"
+        android:padding="10dp"
+        android:text="@string/congrats"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_img_height"
+        android:background="@drawable/winner"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+         android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tv_message">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/winnerImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_margin="2dp"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/winner_bottom"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/btnReBattle"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="RE-BATTLE"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/primary_dark_green"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="EXIT"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
+
