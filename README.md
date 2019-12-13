@@ -1,1 +1,1 @@
-# Edu_quiz
+# This is Edu_quiz app.
